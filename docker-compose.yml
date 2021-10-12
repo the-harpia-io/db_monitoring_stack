@@ -77,9 +77,9 @@ services:
       - 'mariadb_data:/bitnami/mariadb1'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
-      - MARIADB_DATABASE=harp
-      - MARIADB_USER=microservice_template_core
-      - MARIADB_PASSWORD=microservice_template_core
+      - MARIADB_DATABASE=grafana
+      - MARIADB_ROOT_USER=root
+      - MARIADB_ROOT_PASSWORD=5QCSguAnu2mMBZMZ
     networks:
       - monitoring
     healthcheck:
@@ -99,13 +99,20 @@ services:
       - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
       - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
       - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_DATABASE_TYPE=mysql
+      - GF_DATABASE_HOST=mariadb
+      - GF_DATABASE_NAME=grafana
+      - GF_DATABASE_USER=root
+      - GF_DATABASE_PASSWORD=5QCSguAnu2mMBZMZ
     restart: unless-stopped
-    expose:
-      - 3000
+    ports:
+      - "3000:3000"
     networks:
       - monitoring
     labels:
       org.label-schema.group: "monitoring"
+    depends_on:
+      - mariadb
 
 networks:
   monitoring:
