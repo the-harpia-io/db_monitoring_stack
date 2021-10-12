@@ -29,7 +29,7 @@ source .env
 curl -X POST -D- "http://${ip_kb}:5601/api/saved_objects/index-pattern" \
 	-s -w '\n' \
 	-H 'Content-Type: application/json' \
-	-H "kbn-version: ${ELK_VERSION}" \
+	-H "kbn-version: 7.15.0" \
 	-u elastic:testpasswd \
 	-d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}'
 

@@ -1,11 +1,11 @@
-version: '3.2'
+version: '3.8'
 
 services:
   elasticsearch:
     build:
       context: elasticsearch/
       args:
-        ELK_VERSION: $ELK_VERSION
+        ELK_VERSION: 7.15.0
     volumes:
       - type: bind
         source: ./elasticsearch/config/elasticsearch.yml
@@ -24,13 +24,13 @@ services:
       # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
       discovery.type: single-node
     networks:
-      - elk
+      - monitoring
 
   logstash:
     build:
       context: logstash/
       args:
-        ELK_VERSION: $ELK_VERSION
+        ELK_VERSION: 7.15.0
     volumes:
       - type: bind
         source: ./logstash/config/logstash.yml
@@ -48,7 +48,7 @@ services:
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
-      - elk
+      - monitoring
     depends_on:
       - elasticsearch
 
@@ -56,7 +56,7 @@ services:
     build:
       context: kibana/
       args:
-        ELK_VERSION: $ELK_VERSION
+        ELK_VERSION: 7.15.0
     volumes:
       - type: bind
         source: ./kibana/config/kibana.yml
@@ -65,13 +65,53 @@ services:
     ports:
       - "5601:5601"
     networks:
-      - elk
+      - monitoring
     depends_on:
       - elasticsearch
 
+  mariadb:
+    image: 'docker.io/bitnami/mariadb:latest'
+    ports:
+      - '3306:3306'
+    volumes:
+      - 'mariadb_data:/bitnami/mariadb1'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_DATABASE=harp
+      - MARIADB_USER=microservice_template_core
+      - MARIADB_PASSWORD=microservice_template_core
+    networks:
+      - monitoring
+    healthcheck:
+      test: ['CMD', '/opt/bitnami/scripts/mariadb/healthcheck.sh']
+      interval: 15s
+      timeout: 5s
+      retries: 6
+
+  grafana:
+    image: grafana/grafana:8.2.0
+    container_name: grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+    environment:
+      - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+    restart: unless-stopped
+    expose:
+      - 3000
+    networks:
+      - monitoring
+    labels:
+      org.label-schema.group: "monitoring"
+
 networks:
-  elk:
+  monitoring:
     driver: bridge
 
 volumes:
   elasticsearch:
+  mariadb_data:
+  grafana_data:
