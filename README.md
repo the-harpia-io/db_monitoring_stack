@@ -1,3 +1,6 @@
+## Prepare Windows server
+https://aka.ms/wsl2kernel
+
 ## How to install docker
 ### Windows:
 https://docs.docker.com/desktop/windows/install/
