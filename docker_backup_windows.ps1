@@ -1,7 +1,7 @@
 # Clear previous images and volumes
-rm -rf $pwd/backup/volumes/*
-rm -rf $pwd/backup/images/*
-rm -rf $pwd/archives/*
+Remove-Item $pwd/backup/volumes/* -Recurse
+Remove-Item $pwd/backup/images/* -Recurse
+Remove-Item $pwd/archives/* -Recurse
 
 # Save Docker Volumes
 docker run --rm --volumes-from mariadb -v $pwd/backup/volumes:/backup ubuntu tar Pcvf /backup/mariadb_data.tar /bitnami/mariadb
