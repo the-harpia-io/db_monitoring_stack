@@ -8,20 +8,20 @@ docker run --rm --volumes-from mariadb -v $pwd/backup/volumes:/backup ubuntu tar
 docker run --rm --volumes-from elasticsearch -v $pwd/backup/volumes:/backup ubuntu tar Pcvf /backup/elasticsearch_data.tar /usr/share/elasticsearch/data
 
 # Save changes in Images
-docker commit elasticsearch db_monitoring_stack_elasticsearch:latest
-docker commit grafana db_monitoring_stack_grafana:latest
-docker commit logstash db_monitoring_stack_logstash:latest
-docker commit kibana db_monitoring_stack_kibana:latest
-docker commit mariadb mariadb:latest
-docker commit apm-server apm-server:latest
+docker commit elasticsearch docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+docker commit grafana grafana/grafana:8.2.0
+docker commit logstash docker.elastic.co/logstash/logstash:7.15.0
+docker commit kibana docker.elastic.co/kibana/kibana:7.15.0
+docker commit mariadb bitnami/mariadb:latest
+docker commit apm-server docker.elastic.co/apm/apm-server:7.15.0
 
 # Download Images
-docker save db_monitoring_stack_elasticsearch:latest > $pwd/backup/images/db_monitoring_stack_elasticsearch.tar
-docker save db_monitoring_stack_grafana:latest > $pwd/backup/images/db_monitoring_stack_grafana.tar
-docker save db_monitoring_stack_logstash:latest > $pwd/backup/images/db_monitoring_stack_logstash.tar
-docker save db_monitoring_stack_kibana:latest > $pwd/backup/images/db_monitoring_stack_kibana.tar
-docker save mariadb:latest > $pwd/backup/images/mariadb.tar
-docker save apm-server:latest > $pwd/backup/images/apm-server.tar
+docker save docker.elastic.co/elasticsearch/elasticsearch:7.15.0 > $pwd/backup/images/db_monitoring_stack_elasticsearch.tar
+docker save grafana/grafana:8.2.0 > $pwd/backup/images/db_monitoring_stack_grafana.tar
+docker save docker.elastic.co/logstash/logstash:7.15.0 > $pwd/backup/images/db_monitoring_stack_logstash.tar
+docker save docker.elastic.co/kibana/kibana:7.15.0 > $pwd/backup/images/db_monitoring_stack_kibana.tar
+docker save bitnami/mariadb:latest > $pwd/backup/images/mariadb.tar
+docker save docker.elastic.co/apm/apm-server:7.15.0 > $pwd/backup/images/apm-server.tar
 docker save ubuntu:latest > $pwd/backup/images/ubuntu.tar
 
 # Create single archive
