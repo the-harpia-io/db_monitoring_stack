@@ -16,12 +16,12 @@
 # docker commit apm-server docker.elastic.co/apm/apm-server:7.15.0
 
 # Download Images
-#docker save docker.elastic.co/elasticsearch/elasticsearch:7.15.0 -o $pwd/backup/images/db_monitoring_stack_elasticsearch.tar
+docker save docker.elastic.co/elasticsearch/elasticsearch:7.15.0 -o $pwd/backup/images/db_monitoring_stack_elasticsearch.tar
 docker save grafana/grafana:8.2.0 -o $pwd/backup/images/db_monitoring_stack_grafana.tar
-#docker save docker.elastic.co/logstash/logstash:7.15.0 -o $pwd/backup/images/db_monitoring_stack_logstash.tar
-#docker save docker.elastic.co/kibana/kibana:7.15.0 -o $pwd/backup/images/db_monitoring_stack_kibana.tar
+docker save docker.elastic.co/logstash/logstash:7.15.0 -o $pwd/backup/images/db_monitoring_stack_logstash.tar
+docker save docker.elastic.co/kibana/kibana:7.15.0 -o $pwd/backup/images/db_monitoring_stack_kibana.tar
 docker save bitnami/mariadb:latest -o $pwd/backup/images/mariadb.tar
-#docker save docker.elastic.co/apm/apm-server:7.15.0 -o $pwd/backup/images/apm-server.tar
+docker save docker.elastic.co/apm/apm-server:7.15.0 -o $pwd/backup/images/apm-server.tar
 
 # Create single archive
 # Install-Module -Name 7Zip4PowerShell -Verbose

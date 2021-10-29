@@ -31,3 +31,4 @@ archives/NuGet/1.3.3/test/integration/default/serverspec/default_spec.rb
 archives/NuGet/1.3.3/test/integration/helpers/serverspec/spec_helper.rb
 backup/images/db_monitoring_stack_grafana.tar
 backup/images/mariadb.tar
+backup/images/.docker_temp_101524955
