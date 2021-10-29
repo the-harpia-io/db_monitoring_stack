@@ -1,75 +1,70 @@
 version: '3.8'
 
 services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
-    # image: db_monitoring_stack_elasticsearch:latest 
-    container_name: elasticsearch
-    volumes:
-      - type: bind
-        source: ./elasticsearch/config/elasticsearch.yml
-        target: /usr/share/elasticsearch/config/elasticsearch.yml
-        read_only: true
-      - type: volume
-        source: elasticsearch
-        target: /usr/share/elasticsearch/data
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-    environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-      ELASTIC_PASSWORD: changeme
-      discovery.type: single-node
-    networks:
-      - monitoring
+#  elasticsearch:
+#    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+#    container_name: elasticsearch
+#    volumes:
+#      - type: bind
+#        source: ./elasticsearch/config/elasticsearch.yml
+#        target: /usr/share/elasticsearch/config/elasticsearch.yml
+#        read_only: true
+#      - type: volume
+#        source: elasticsearch
+#        target: /usr/share/elasticsearch/data
+#    ports:
+#      - "9200:9200"
+#      - "9300:9300"
+#    environment:
+#      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+#      ELASTIC_PASSWORD: changeme
+#      discovery.type: single-node
+#    networks:
+#      - monitoring
 
-  logstash:
-    image: docker.elastic.co/logstash/logstash:7.15.0
-    # image: db_monitoring_stack_logstash:latest
-    container_name: logstash
-    volumes:
-      - type: bind
-        source: ./logstash/config/logstash.yml
-        target: /usr/share/logstash/config/logstash.yml
-        read_only: true
-      - type: bind
-        source: ./logstash/pipeline
-        target: /usr/share/logstash/pipeline
-        read_only: true
-    ports:
-      - "5044:5044"
-      - "5000:5000/tcp"
-      - "5000:5000/udp"
-      - "7200:7200"
+#  logstash:
+#    image: docker.elastic.co/logstash/logstash:7.15.0
+#    container_name: logstash
+#    volumes:
+#      - type: bind
+#        source: ./logstash/config/logstash.yml
+#        target: /usr/share/logstash/config/logstash.yml
+#        read_only: true
+#      - type: bind
+#        source: ./logstash/pipeline
+#        target: /usr/share/logstash/pipeline
+#        read_only: true
+#    ports:
+#      - "5044:5044"
+#      - "5000:5000/tcp"
+#      - "5000:5000/udp"
+#      - "7200:7200"
+#    environment:
+#      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+#    networks:
+#      - monitoring
+#    depends_on:
+#      - elasticsearch
 
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - monitoring
-    depends_on:
-      - elasticsearch
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana:7.15.0
-    # image: db_monitoring_stack_kibana:latest
-    container_name: kibana
-    environment:
-      ELASTICSEARCH_URL: http://elasticsearch:9200
-      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
-    ports:
-      - "5601:5601"
-    networks:
-      - monitoring
-    depends_on:
-      - elasticsearch
-    healthcheck:
-      interval: 10s
-      retries: 20
-      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:5601/api/status
+#  kibana:
+#    image: docker.elastic.co/kibana/kibana:7.15.0
+#    container_name: kibana
+#    environment:
+#      ELASTICSEARCH_URL: http://elasticsearch:9200
+#      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+#    ports:
+#      - "5601:5601"
+#    networks:
+#      - monitoring
+#    depends_on:
+#      - elasticsearch
+#    healthcheck:
+#      interval: 10s
+#      retries: 20
+#      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:5601/api/status
 
   mariadb:
     image: 'docker.io/bitnami/mariadb:latest'
-    # image: mariadb:latest 
     container_name: mariadb
     ports:
       - '3306:3306'
@@ -89,9 +84,12 @@ services:
       retries: 6
 
   grafana:
-    image: grafana/grafana:8.2.0
-    # image: db_monitoring_stack_grafana:latest 
+    image: grafana/grafana:8.2.0 
     container_name: grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
     environment:
       - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
       - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
@@ -109,33 +107,32 @@ services:
     labels:
       org.label-schema.group: "monitoring"
     depends_on:
-      - mariadb	  
+      - mariadb
 
-  apm-server:
-    image: docker.elastic.co/apm/apm-server:7.15.0
-    # image: apm-server:latest
-    container_name: apm-server
-    depends_on:
-      - elasticsearch
-      - kibana
-    cap_add: ["CHOWN", "DAC_OVERRIDE", "SETGID", "SETUID"]
-    cap_drop: ["ALL"]
-    ports:
-    - 8200:8200
-    networks:
-    - monitoring
-    command: >
-       apm-server -e
-         -E apm-server.rum.enabled=true
-         -E setup.kibana.host=kibana:5601
-         -E setup.template.settings.index.number_of_replicas=0
-         -E apm-server.kibana.enabled=true
-         -E apm-server.kibana.host=kibana:5601
-         -E output.elasticsearch.hosts=["elasticsearch:9200"]
-    healthcheck:
-      interval: 10s
-      retries: 12
-      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
+#  apm-server:
+#    image: docker.elastic.co/apm/apm-server:7.15.0
+#    container_name: apm-server
+#    depends_on:
+#      - elasticsearch
+#      - kibana
+#    cap_add: ["CHOWN", "DAC_OVERRIDE", "SETGID", "SETUID"]
+#    cap_drop: ["ALL"]
+#    ports:
+#    - 8200:8200
+#    networks:
+#    - monitoring
+#    command: >
+#       apm-server -e
+#         -E apm-server.rum.enabled=true
+#         -E setup.kibana.host=kibana:5601
+#         -E setup.template.settings.index.number_of_replicas=0
+#         -E apm-server.kibana.enabled=true
+#         -E apm-server.kibana.host=kibana:5601
+#         -E output.elasticsearch.hosts=["elasticsearch:9200"]
+#    healthcheck:
+#      interval: 10s
+#      retries: 12
+#      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
 
 
 networks:
@@ -145,3 +142,4 @@ networks:
 volumes:
   elasticsearch:
   mariadb_data:
+  grafana_data:
