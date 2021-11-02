@@ -1,0 +1,26 @@
+global:
+  dashboards:
+    - Dashboard Name E
+  datasources:
+    - Datasource 4
+
+clientA:
+  dashboards:
+    - Dashboard Name A
+    - Dashboard Name B
+  datasources:
+    - Datasource 1
+    - Datasource 2
+  slack:
+    - http://akalala/sadadad
+
+
+clientB:
+  dashboards:
+    - Dashboard Name C
+    - Dashboard Name D
+  datasources:
+    - Datasource 1
+    - Datasource 2
+  slack:
+    - http://akalala/sadadad
