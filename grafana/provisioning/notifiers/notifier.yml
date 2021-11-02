@@ -1,0 +1,11 @@
+notifiers:
+  - name: Slack
+    type: slack
+    uid: notifier1
+    org_name: Main Org.
+    is_default: true
+    send_reminder: true
+    frequency: 1h
+    disable_resolve_message: false
+    secure_settings:
+      url: https://slack.com

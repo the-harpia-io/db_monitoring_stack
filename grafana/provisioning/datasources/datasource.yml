@@ -154,3 +154,12 @@ datasources:
       timeField: "@timestamp"
       esVersion: "7.10.0"
       maxConcurrentShardRequests: 5
+  - name: collector_wait_stats
+    type: elasticsearch
+    access: proxy
+    database: "collector_wait_stats*"
+    url: http://elasticsearch:9200
+    jsonData:
+      timeField: "@timestamp"
+      esVersion: "7.10.0"
+      maxConcurrentShardRequests: 5
