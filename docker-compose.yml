@@ -138,38 +138,38 @@ services:
       retries: 12
       test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
 
-  influxdb:
-    image: influxdb:1.8.10
-    container_name: influxdb
-    ports:
-      - "8083:8083"
-      - "8086:8086"
-      - "8090:8090"
-    networks:
-      - monitoring
-    volumes:
-      - influxdb_data:/var/lib/influxdb
-    environment:
-      - INFLUXDB_DATA_ENGINE=tsm1
-      - INFLUXDB_REPORTING_DISABLED=true
-      - INFLUXDB_GRAPHITE_BATCH_SIZE=1000
+  # influxdb:
+  #   image: influxdb:1.8.10
+  #   container_name: influxdb
+  #   ports:
+  #     - "8083:8083"
+  #     - "8086:8086"
+  #     - "8090:8090"
+  #   networks:
+  #     - monitoring
+  #   volumes:
+  #     - influxdb_data:/var/lib/influxdb
+  #   environment:
+  #     - INFLUXDB_DATA_ENGINE=tsm1
+  #     - INFLUXDB_REPORTING_DISABLED=true
+  #     - INFLUXDB_GRAPHITE_BATCH_SIZE=1000
 
-  telegraf:
-    image: telegraf:1.18.3
-    container_name: telegraf
-    networks:
-      - monitoring
-    volumes:
-      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-      - /:/hostfs:ro
-      - /proc:/hostfs/proc:ro
-      - /sys:/hostfs/sys:ro
-      - /var/run:/var/run:ro
-      - /var/run/docker.sock:/var/run/docker.sock:rw
-    environment:
-      - HOST_PROC=/hostfs/proc
-      - HOST_SYS=/hostfs/sys
-      - HOST_MOUNT_PREFIX=/hostfs
+  # telegraf:
+  #   image: telegraf:1.18.3
+  #   container_name: telegraf
+  #   networks:
+  #     - monitoring
+  #   volumes:
+  #     - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+  #     - /:/hostfs:ro
+  #     - /proc:/hostfs/proc:ro
+  #     - /sys:/hostfs/sys:ro
+  #     - /var/run:/var/run:ro
+  #     - /var/run/docker.sock:/var/run/docker.sock:rw
+  #   environment:
+  #     - HOST_PROC=/hostfs/proc
+  #     - HOST_SYS=/hostfs/sys
+  #     - HOST_MOUNT_PREFIX=/hostfs
 
 
 networks:
