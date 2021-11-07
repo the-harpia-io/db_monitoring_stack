@@ -1065,9 +1065,6 @@
         "name": "memory grants pending alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "datasource": "collector_perfmon_sql",
@@ -1246,9 +1243,6 @@
         "name": "work_queue_count alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "datasource": "collector_pending_tasks",
@@ -1426,9 +1420,6 @@
         "name": "service broker queues alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "aliasColors": {},
@@ -1627,9 +1618,6 @@
         "name": "C:\\ - logical disk % free disk alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "datasource": "collector_perfmon_sql",
@@ -1937,9 +1925,6 @@
         "name": "% processor time alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "datasource": "collector_perfmon_sql",
@@ -2100,9 +2085,6 @@
         "name": "processor queue length alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "datasource": "collector_perfmon_sql",
@@ -2281,9 +2263,6 @@
         "name": "D:\\ - logical disk % free disk alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "datasource": "collector_perfmon_sql",
@@ -2603,9 +2582,6 @@
         "name": "Collectors status alert",
         "noDataState": "no_data",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "datasource": "collector",
@@ -2791,9 +2767,6 @@
         "name": "missing backups alert",
         "noDataState": "ok",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "aliasColors": {},
@@ -2999,9 +2972,6 @@
         "name": "event log alert",
         "noDataState": "ok",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "aliasColors": {},
@@ -3913,9 +3883,6 @@
         "name": "sql jobs alert",
         "noDataState": "ok",
         "notifications": [
-          {
-            "uid": "sQEVUWH7z"
-          }
         ]
       },
       "aliasColors": {},

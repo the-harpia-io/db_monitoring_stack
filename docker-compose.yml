@@ -183,7 +183,7 @@ services:
       - /proc:/hostfs/proc:ro
       - /sys:/hostfs/sys:ro
       - /var/run:/var/run:ro
-      - /var/run/docker.sock:/var/run/docker.sock:r
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - HOST_PROC=/hostfs/proc
       - HOST_SYS=/hostfs/sys
