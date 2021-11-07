@@ -4,8 +4,8 @@ global:
     - SQL Servers.json
     - Web Servers.json
 
-clientA:
+Motorola-Zramim:
   dashboards:
     - Replication.json
   slack:
-    - http://akalala/sadadad
+    - https://hooks.slack.com/services/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

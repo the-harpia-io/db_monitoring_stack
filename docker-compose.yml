@@ -101,8 +101,6 @@ services:
       - GF_DATABASE_PASSWORD=5QCSguAnu2mMBZMZ
       - GF_ALERTING_ENABLED=true
       - GF_UNIFIED_ALERTING_ENABLED=false
-    links:
-      - influxdb
     restart: unless-stopped
     ports:
       - "3000:3000"
