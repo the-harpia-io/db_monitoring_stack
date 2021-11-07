@@ -18,7 +18,7 @@ sudo tar -xzvf monitoring_db_stack.tar.gz && cd monitoring_db_stack
 chmod +x ./scripts/docker_install.sh && sudo ./scripts/docker_install.sh
 
 ### Install Monitoring DB Stack
-chmod +x ./scripts/install_monitoring_stack.sh && sudo ./scripts/install_monitoring_stack.sh
+export CLIENT_NAME=ClientA && chmod +x ./scripts/install_monitoring_stack.sh && sudo ./scripts/install_monitoring_stack.sh
 
 # Upgrade Monitoring DB Stack
 ## Windows:
