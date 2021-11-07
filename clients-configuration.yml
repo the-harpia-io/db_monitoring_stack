@@ -3,6 +3,7 @@ global:
     - SQL Servers - Alerts.json
     - SQL Servers.json
     - Web Servers.json
+    - Docker Dashboard.json
 
 Motorola-Zramim:
   dashboards:
