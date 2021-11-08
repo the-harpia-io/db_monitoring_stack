@@ -16,7 +16,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ES_JAVA_OPTS: "-Xmx4g -Xms4g"
       ELASTIC_PASSWORD: changeme
       discovery.type: single-node
     networks:
