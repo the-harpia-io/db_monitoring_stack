@@ -10,3 +10,9 @@ Motorola-Zramim:
     - Replication.json
   slack:
     - https://hooks.slack.com/services/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
+
+logicait:
+  dashboards:
+    - Replication.json
+  slack:
+    - https://hooks.slack.com
