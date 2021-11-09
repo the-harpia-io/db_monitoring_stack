@@ -1,4 +1,4 @@
-# Windwos: Install Monitoring DB Stack
+# Windows: Install Monitoring DB Stack
 ## Configure Windows virtualization for Docker
 1. Open Start on Windows 10
 2. Search for Command Prompt, right-click the top result, and select the Run as administrator option
