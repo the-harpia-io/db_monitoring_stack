@@ -4,6 +4,7 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
     container_name: elasticsearch
+    restart: unless-stopped
     volumes:
       - type: bind
         source: ./elasticsearch/config/elasticsearch.yml
@@ -25,6 +26,7 @@ services:
   logstash:
     image: docker.elastic.co/logstash/logstash:7.15.0
     container_name: logstash
+    restart: unless-stopped
     volumes:
       - type: bind
         source: ./logstash/config/logstash.yml
@@ -49,6 +51,7 @@ services:
   kibana:
     image: docker.elastic.co/kibana/kibana:7.15.0
     container_name: kibana
+    restart: unless-stopped
     environment:
       ELASTICSEARCH_URL: http://elasticsearch:9200
       ELASTICSEARCH_HOSTS: http://elasticsearch:9200
@@ -66,6 +69,7 @@ services:
   mariadb:
     image: 'docker.io/bitnami/mariadb:latest'
     container_name: mariadb
+    restart: unless-stopped
     ports:
       - '3306:3306'
     volumes:
@@ -86,6 +90,7 @@ services:
   grafana:
     image: grafana/grafana:8.2.0 
     container_name: grafana
+    restart: unless-stopped
     volumes:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
@@ -114,6 +119,7 @@ services:
   apm-server:
     image: docker.elastic.co/apm/apm-server:7.15.0
     container_name: apm-server
+    restart: unless-stopped
     depends_on:
       - elasticsearch
       - kibana
@@ -158,6 +164,7 @@ services:
   influxdb:
     image: influxdb:1.8.10
     container_name: influxdb
+    restart: unless-stopped
     ports:
       - "8083:8083"
       - "8086:8086"
@@ -174,6 +181,7 @@ services:
   telegraf:
     image: telegraf:1.18.3
     container_name: telegraf
+    restart: unless-stopped
     user: root
     networks:
       - monitoring
