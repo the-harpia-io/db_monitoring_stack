@@ -4,7 +4,7 @@ global:
     - SQL Servers.json
     - Web Servers.json
     - Docker Dashboard.json
-    - Elasticsearch.json
+    - elasticsearch.json
 
 Motorola-Zramim:
   dashboards:
