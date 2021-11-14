@@ -20,9 +20,10 @@ https://github.com/git-for-windows/git/releases/download/v2.33.1.windows.1/Git-2
 ```
 $env:CLIENT_NAME = 'Motorola-Zramim'
 $env:SLACK_WEBHOOK = 'http://slack-webhook.com/url'
+$env:LICENSE_KEY = '<Your unique License key>'
 ```
-```$env:SLACK_WEBHOOK = 'http://slack-webhook.com/url'```
-```$env:LICENSE_KEY = '<Your unique License key>'```
 4. Start Services
-```cd monitoring_db_stack```
-```docker-compose up -d```
+```
+cd monitoring_db_stack
+docker-compose up -d
+```
