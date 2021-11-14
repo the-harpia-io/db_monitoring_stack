@@ -17,7 +17,10 @@ https://github.com/git-for-windows/git/releases/download/v2.33.1.windows.1/Git-2
 2. Download package
 ```git clone https://github.com/the-harpia-io/monitoring_db_stack.git```
 3. Specify Client Name
-```$env:CLIENT_NAME = 'Motorola-Zramim'```
+```
+$env:CLIENT_NAME = 'Motorola-Zramim'
+$env:SLACK_WEBHOOK = 'http://slack-webhook.com/url'
+```
 ```$env:SLACK_WEBHOOK = 'http://slack-webhook.com/url'```
 ```$env:LICENSE_KEY = '<Your unique License key>'```
 4. Start Services
