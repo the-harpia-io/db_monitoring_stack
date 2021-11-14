@@ -16,7 +16,7 @@ https://github.com/git-for-windows/git/releases/download/v2.33.1.windows.1/Git-2
 1. Open PowerShell
 2. Download package
 ```git clone https://github.com/the-harpia-io/monitoring_db_stack.git```
-3. Specify Client Name
+3. Specify Client Name, Slack and License key:
 ```
 $env:CLIENT_NAME = 'Motorola-Zramim'
 $env:SLACK_WEBHOOK = 'http://slack-webhook.com/url'
