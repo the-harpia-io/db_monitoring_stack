@@ -1,0 +1,13 @@
+{
+    "name": "collector_pending_tasks",
+    "type": "elasticsearch",
+    "url": "http://elasticsearch:9200",
+    "access": "proxy",
+    "editable": true,
+    "database": "collector_pending_tasks*",
+    "jsonData": {
+        "timeField": "@timestamp",
+        "esVersion": "7.10.0",
+        "maxConcurrentShardRequests": 5
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "collector_mssql_top_resource_consumers_cpu_seconds_per_minute",
+    "type": "elasticsearch",
+    "url": "http://elasticsearch:9200",
+    "access": "proxy",
+    "editable": true,
+    "database": "collector_mssql_top_resource_consumers_cpu_seconds_per_minute*",
+    "jsonData": {
+        "timeField": "@timestamp",
+        "esVersion": "7.10.0",
+        "maxConcurrentShardRequests": 5
+    }
+}

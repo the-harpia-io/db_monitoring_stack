@@ -1,0 +1,13 @@
+{
+    "name": "nxlogiis",
+    "type": "elasticsearch",
+    "url": "http://elasticsearch:9200",
+    "access": "proxy",
+    "editable": true,
+    "database": "nxlogiis*",
+    "jsonData": {
+        "timeField": "@timestamp",
+        "esVersion": "7.10.0",
+        "maxConcurrentShardRequests": 5
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "collector_replication_distribution_agents_synschronization_status",
+    "type": "elasticsearch",
+    "url": "http://elasticsearch:9200",
+    "access": "proxy",
+    "editable": true,
+    "database": "collector_replication_distribution_agents_synschronization_status*",
+    "jsonData": {
+        "timeField": "@timestamp",
+        "esVersion": "7.10.0",
+        "maxConcurrentShardRequests": 5
+    }
+}

@@ -17,7 +17,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     environment:
-      ES_JAVA_OPTS: "-Xmx8g -Xms8g"
+      ES_JAVA_OPTS: "-Xmx12g -Xms12g"
       ELASTIC_PASSWORD: changeme
       discovery.type: single-node
     networks:
@@ -144,7 +144,7 @@ services:
       test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
 
   monitoring-controller:
-    image: theharpia/monitoring_controller:v1.0.1
+    image: theharpia/monitoring_controller:v1.0.2
     container_name: monitoring-controller
     volumes:
       - .:/tmp
@@ -155,6 +155,8 @@ services:
       - GRAFANA_PASSWORD=admin
       - KIBANA_API=kibana:5601
       - CLIENT_NAME=$CLIENT_NAME
+      - SLACK_WEBHOOK=$SLACK_WEBHOOK
+      - LICENSE_KEY=$LICENSE_KEY
     networks:
       - monitoring
     depends_on:
