@@ -27,3 +27,6 @@ $env:LICENSE_KEY = '<Your unique License key>'
 cd monitoring_db_stack
 docker-compose up -d
 ```
+
+# Linux: Install Monitoring DB Stack
+## Download monitoring stack package

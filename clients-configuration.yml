@@ -32,11 +32,19 @@ global:
 Motorola-Zramim:
   dashboards:
     - Replication.json
+    - SQL Servers Always On.json
   datasources:
     - InfluxDB.json
 
 logicait:
   dashboards:
-    - Replication.json
+  datasources:
+    - InfluxDB.json
+
+ACFUK:
+  dashboards:
+    - SQL Servers Always On.json
+    - SQL Servers QFlow.json
+    - ACF Web Servers.json
   datasources:
     - InfluxDB.json
