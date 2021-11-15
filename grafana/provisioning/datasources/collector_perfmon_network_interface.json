@@ -1,0 +1,13 @@
+{
+    "name": "collector_perfmon_network_interface",
+    "type": "elasticsearch",
+    "url": "http://elasticsearch:9200",
+    "access": "proxy",
+    "editable": true,
+    "database": "collector_perfmon_network_interface*",
+    "jsonData": {
+        "timeField": "@timestamp",
+        "esVersion": "7.10.0",
+        "maxConcurrentShardRequests": 5
+    }
+}
