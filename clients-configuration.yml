@@ -27,6 +27,8 @@ global:
     - collector_wait_stats.json
     - collector.json
     - nxlogiis.json
+    - collector_perfmon_logicaldisk.json
+    - collector_perfmon_network_interface.json
 
 
 Motorola-Zramim:
