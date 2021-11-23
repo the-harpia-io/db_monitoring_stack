@@ -29,6 +29,7 @@ global:
     - nxlogiis.json
     - collector_perfmon_logicaldisk.json
     - collector_perfmon_network_interface.json
+    - collector_services.json
 
 
 Motorola-Zramim:
