@@ -97,7 +97,7 @@ services:
       - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
     environment:
       - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
-      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-Ahuzot=100}
+      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-Ahuzot=100$}
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_DATABASE_TYPE=mysql
       - GF_DATABASE_HOST=mariadb
@@ -151,7 +151,7 @@ services:
       - CLIENT_CONFIG_PATH=/tmp
       - GRAFANA_API=grafana:3000
       - GRAFANA_USER=admin
-      - GRAFANA_PASSWORD="Ahuzot=100$"
+      - GRAFANA_PASSWORD=Ahuzot=100$$
       - KIBANA_API=kibana:5601
       - CLIENT_NAME=$CLIENT_NAME
       - SLACK_WEBHOOK=$SLACK_WEBHOOK
