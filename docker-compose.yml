@@ -180,7 +180,7 @@ services:
       test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
 
   monitoring-controller:
-    image: theharpia/monitoring_controller:v1.0.2
+    image: theharpia/monitoring_controller:v1.0.3
     container_name: monitoring-controller
     volumes:
       - .:/tmp
@@ -190,6 +190,7 @@ services:
       - GRAFANA_USER=admin
       - GRAFANA_PASSWORD=Ahuzot=100$$
       - KIBANA_API=kibana:5601
+      - ELASTIC_API=elasticsearch:9200
       # - CLIENT_NAME=$CLIENT_NAME
       # - SLACK_WEBHOOK=$SLACK_WEBHOOK
       # - LICENSE_KEY=$LICENSE_KEY
