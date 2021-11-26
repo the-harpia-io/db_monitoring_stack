@@ -19,7 +19,7 @@ services:
     deploy:
       resources: 
         limits: 
-          cpus: "6"
+          cpus: "2"
           memory: 8096M
     environment:
       - bootstrap.memory_lock=true
