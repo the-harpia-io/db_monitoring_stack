@@ -191,6 +191,7 @@ services:
       - GRAFANA_PASSWORD=Ahuzot=100$$
       - KIBANA_API=kibana:5601
       - ELASTIC_API=elasticsearch:9200
+      - ELASTIC_INDEX_RETENTION_DAYS=3
       # - CLIENT_NAME=$CLIENT_NAME
       # - SLACK_WEBHOOK=$SLACK_WEBHOOK
       # - LICENSE_KEY=$LICENSE_KEY
