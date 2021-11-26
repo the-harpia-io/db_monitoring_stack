@@ -53,6 +53,11 @@ services:
       - "5000:5000/tcp"
       - "5000:5000/udp"
       - "7200:7200"
+    deploy:
+      resources: 
+        limits: 
+          cpus: "1"
+          memory: 2096M
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
@@ -69,6 +74,11 @@ services:
       ELASTICSEARCH_HOSTS: http://elasticsearch:9200
     ports:
       - "5601:5601"
+    deploy:
+      resources: 
+        limits: 
+          cpus: "1"
+          memory: 2096M
     networks:
       - monitoring
     depends_on:
@@ -93,6 +103,11 @@ services:
       - MARIADB_ROOT_PASSWORD=5QCSguAnu2mMBZMZ
     networks:
       - monitoring
+    deploy:
+      resources: 
+        limits: 
+          cpus: "1"
+          memory: 512M
     healthcheck:
       test: ['CMD', '/opt/bitnami/scripts/mariadb/healthcheck.sh']
       interval: 15s
@@ -121,6 +136,11 @@ services:
       - GF_INSTALL_PLUGINS=natel-discrete-panel
     ports:
       - "3000:3000"
+    deploy:
+      resources: 
+        limits: 
+          cpus: "1"
+          memory: 512M
     networks:
       - monitoring
     labels:
@@ -149,6 +169,11 @@ services:
          -E apm-server.kibana.enabled=true
          -E apm-server.kibana.host=kibana:5601
          -E output.elasticsearch.hosts=["elasticsearch:9200"]
+    deploy:
+      resources: 
+        limits: 
+          cpus: "1"
+          memory: 512M
     healthcheck:
       interval: 10s
       retries: 12
@@ -190,6 +215,11 @@ services:
       - monitoring
     volumes:
       - influxdb_data:/var/lib/influxdb
+    deploy:
+      resources: 
+        limits: 
+          cpus: "1"
+          memory: 2048M
     environment:
       - INFLUXDB_DATA_ENGINE=tsm1
       - INFLUXDB_REPORTING_DISABLED=true
@@ -209,6 +239,11 @@ services:
       - /sys:/hostfs/sys:ro
       - /var/run:/var/run:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    deploy:
+      resources: 
+        limits: 
+          cpus: "1"
+          memory: 512M
     environment:
       - HOST_PROC=/hostfs/proc
       - HOST_SYS=/hostfs/sys
