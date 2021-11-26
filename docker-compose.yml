@@ -16,10 +16,22 @@ services:
     ports:
       - "9200:9200"
       - "9300:9300"
+    deploy:
+      resources: 
+        limits: 
+          cpus: "6"
+          memory: 8096M
     environment:
-      ES_JAVA_OPTS: "-Xmx12g -Xms12g"
-      ELASTIC_PASSWORD: changeme
-      discovery.type: single-node
+      - bootstrap.memory_lock=true
+      - discovery.type=single-node
+    ulimits: 
+      memlock: 
+        hard: -1
+        soft: -1
+      nofile: 
+        hard: 65535
+        soft: 65535
+      nproc: 65535
     networks:
       - monitoring
 
@@ -153,9 +165,12 @@ services:
       - GRAFANA_USER=admin
       - GRAFANA_PASSWORD=Ahuzot=100$$
       - KIBANA_API=kibana:5601
-      - CLIENT_NAME=$CLIENT_NAME
-      - SLACK_WEBHOOK=$SLACK_WEBHOOK
-      - LICENSE_KEY=$LICENSE_KEY
+      # - CLIENT_NAME=$CLIENT_NAME
+      # - SLACK_WEBHOOK=$SLACK_WEBHOOK
+      # - LICENSE_KEY=$LICENSE_KEY
+      - CLIENT_NAME=Motorola-Zramim
+      - SLACK_WEBHOOK=http://slack.example.com
+      - LICENSE_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1vdG9yb2xhLVpyYW1pbSIsImV4cCI6MTYzOTQ5ODczNn0.r_UNxPWNY9kShs_YeBE8kEvnKayhP4wAVUkA-iEDaAg
     networks:
       - monitoring
     depends_on:
