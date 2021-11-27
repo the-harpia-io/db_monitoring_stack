@@ -191,12 +191,12 @@ services:
       - GRAFANA_PASSWORD=Ahuzot=100$$
       - KIBANA_API=kibana:5601
       - ELASTIC_API=elasticsearch:9200
-      # - CLIENT_NAME=$CLIENT_NAME
-      # - SLACK_WEBHOOK=$SLACK_WEBHOOK
-      # - LICENSE_KEY=$LICENSE_KEY
-      - CLIENT_NAME=Motorola-Zramim
-      - SLACK_WEBHOOK=http://slack.example.com
-      - LICENSE_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1vdG9yb2xhLVpyYW1pbSIsImV4cCI6MTYzOTQ5ODczNn0.r_UNxPWNY9kShs_YeBE8kEvnKayhP4wAVUkA-iEDaAg
+      - CLIENT_NAME=$CLIENT_NAME
+      - SLACK_WEBHOOK=$SLACK_WEBHOOK
+      - LICENSE_KEY=$LICENSE_KEY
+      # - CLIENT_NAME=Motorola-Zramim
+      # - SLACK_WEBHOOK=http://slack.example.com
+      # - LICENSE_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1vdG9yb2xhLVpyYW1pbSIsImV4cCI6MTYzOTQ5ODczNn0.r_UNxPWNY9kShs_YeBE8kEvnKayhP4wAVUkA-iEDaAg
     networks:
       - monitoring
     depends_on:

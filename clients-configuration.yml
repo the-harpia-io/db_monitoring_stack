@@ -39,13 +39,13 @@ Motorola-Zramim:
     - SQL Servers Always On.json
   datasources:
     - InfluxDB.json
-  elastic_retention_in_days: 30
+  elastic_retention_in_days: 3
 
 logicait:
   dashboards:
   datasources:
     - InfluxDB.json
-  elastic_retention_in_days: 30
+  elastic_retention_in_days: 3
 
 ACFUK:
   dashboards:
@@ -54,4 +54,4 @@ ACFUK:
     - ACF Web Servers.json
   datasources:
     - InfluxDB.json
-  elastic_retention_in_days: 30
+  elastic_retention_in_days: 3
