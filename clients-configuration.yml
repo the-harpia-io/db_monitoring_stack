@@ -30,6 +30,7 @@ global:
     - collector_perfmon_logicaldisk.json
     - collector_perfmon_network_interface.json
     - collector_services.json
+  elastic_retention_in_days: 30
 
 
 Motorola-Zramim:
@@ -38,11 +39,13 @@ Motorola-Zramim:
     - SQL Servers Always On.json
   datasources:
     - InfluxDB.json
+  elastic_retention_in_days: 30
 
 logicait:
   dashboards:
   datasources:
     - InfluxDB.json
+  elastic_retention_in_days: 30
 
 ACFUK:
   dashboards:
@@ -51,3 +54,4 @@ ACFUK:
     - ACF Web Servers.json
   datasources:
     - InfluxDB.json
+  elastic_retention_in_days: 30
