@@ -58,6 +58,7 @@ ACFUK:
 
 afcon:
   dashboards:
+    - SQL Servers Always On.json
   datasources:
     - InfluxDB.json
   elastic_retention_in_days: 30
