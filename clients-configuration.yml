@@ -55,3 +55,9 @@ ACFUK:
   datasources:
     - InfluxDB.json
   elastic_retention_in_days: 3
+
+afcon:
+  dashboards:
+  datasources:
+    - InfluxDB.json
+  elastic_retention_in_days: 30
