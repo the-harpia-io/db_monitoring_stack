@@ -23,9 +23,22 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 1150,
   "graphTooltip": 0,
-  "id": 15,
-  "iteration": 1636900097166,
-  "links": [],
+  "id": 5,
+  "iteration": 1638540271446,
+  "links": [
+    {
+      "asDropdown": true,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": true,
+      "tags": [],
+      "targetBlank": false,
+      "title": "dashboards",
+      "tooltip": "",
+      "type": "dashboards",
+      "url": ""
+    }
+  ],
   "liveNow": false,
   "panels": [
     {
@@ -2838,9 +2851,10 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
-          "text": "grafana",
-          "value": "grafana"
+          "isNone": true,
+          "selected": true,
+          "text": "None",
+          "value": ""
         },
         "datasource": "InfluxDB",
         "definition": "show tag values with key = \"container_name\"",
@@ -2895,5 +2909,5 @@
   "timezone": "browser",
   "title": "Docker Dashboard",
   "uid": "iMowdtHZz",
-  "version": 18
+  "version": 4
 }

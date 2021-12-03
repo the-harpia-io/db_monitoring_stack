@@ -22,8 +22,8 @@
   "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": 7,
-  "iteration": 1636306321299,
+  "id": 4,
+  "iteration": 1638517998151,
   "links": [
     {
       "asDropdown": true,
@@ -3845,8 +3845,8 @@
             "$__all"
           ]
         },
-        "datasource": "collector_perfmon_web",
-        "definition": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
+        "datasource": "nxlogiis",
+        "definition": "{\"find\":\"terms\",\"field\": \"host.keyword\"}",
         "description": "",
         "error": null,
         "hide": 0,
@@ -3855,7 +3855,7 @@
         "multi": true,
         "name": "Servers",
         "options": [],
-        "query": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
+        "query": "{\"find\":\"terms\",\"field\": \"host.keyword\"}",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -3865,12 +3865,12 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Web Servers",
   "uid": "ZiVCRo4nz",
-  "version": 8
+  "version": 3
 }

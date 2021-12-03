@@ -22,14 +22,15 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 10507,
   "graphTooltip": 1,
-  "id": 2,
-  "iteration": 1636662819075,
+  "id": 6,
+  "iteration": 1638540364704,
   "links": [
     {
+      "asDropdown": true,
       "icon": "external link",
-      "tags": [
-        "escluster"
-      ],
+      "keepTime": true,
+      "tags": [],
+      "title": "dashboards",
       "type": "dashboards"
     }
   ],
@@ -1144,6 +1145,7 @@
       "transparent": true,
       "type": "natel-discrete-panel",
       "units": "short",
+      "use12HourClock": false,
       "useTimePrecision": false,
       "valueMaps": [
         {
@@ -5470,10 +5472,9 @@
       {
         "allValue": null,
         "current": {
-          "isNone": true,
-          "selected": true,
-          "text": "None",
-          "value": ""
+          "selected": false,
+          "text": "docker-cluster",
+          "value": "docker-cluster"
         },
         "datasource": "InfluxDB",
         "definition": "show tag values from elasticsearch_cluster_health with key = \"name\"",
@@ -5498,7 +5499,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "autogen",
           "value": "autogen"
         },
@@ -5556,5 +5557,5 @@
   "timezone": "",
   "title": "Elasticsearch",
   "uid": "000000023",
-  "version": 1
+  "version": 3
 }
