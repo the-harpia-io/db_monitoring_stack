@@ -53,6 +53,7 @@ services:
       - "5000:5000/tcp"
       - "5000:5000/udp"
       - "7200:7200"
+      - "7201:7201"
     deploy:
       resources: 
         limits: 
