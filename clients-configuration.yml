@@ -62,7 +62,7 @@ afcon:
     - InfluxDB.json
   elastic_retention_in_days: 30
 
-  powercom:
+powercom:
   dashboards:    
     - SQL Servers Always On.json
   datasources:
