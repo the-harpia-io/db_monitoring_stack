@@ -47,7 +47,7 @@ logicait:
     - InfluxDB.json
   elastic_retention_in_days: 3
 
-ACFUK:
+acfuk:
   dashboards:
     - SQL Servers Always On.json
     - SQL Servers QFlow.json
