@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
   "id": 8,
-  "iteration": 1638921612765,
+  "iteration": 1638981735870,
   "links": [
     {
       "asDropdown": true,
@@ -1018,11 +1018,7 @@
       }
     },
     {
-<<<<<<< HEAD
       "collapsed": true,
-=======
-      "collapsed": false,
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1030,55 +1026,11 @@
         "y": 24
       },
       "id": 34,
-<<<<<<< HEAD
       "panels": [
         {
           "datasource": {
             "type": "elasticsearch",
             "uid": "FIPc52hnz"
-=======
-      "panels": [],
-      "title": "Web Metrics",
-      "type": "row"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -1136,7 +1088,7 @@
                   "options": {
                     "mode": "exclude",
                     "names": [
-                      "NHSDIG-WEBPD-03"
+                      "NHSDIG-WEBPD-01"
                     ],
                     "prefix": "All except:",
                     "readOnly": true
@@ -1212,7 +1164,6 @@
               "timeField": "@timestamp"
             }
           ],
-<<<<<<< HEAD
           "title": "requests current",
           "type": "timeseries"
         },
@@ -1220,60 +1171,12 @@
           "datasource": {
             "type": "elasticsearch",
             "uid": "FIPc52hnz"
-=======
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": "requests current",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
               "color": {
                 "mode": "palette-classic"
               },
-<<<<<<< HEAD
               "custom": {
                 "axisLabel": "",
                 "axisPlacement": "auto",
@@ -1282,367 +1185,6 @@
                 "fillOpacity": 0,
                 "gradientMode": "none",
                 "hideFrom": {
-=======
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 8,
-        "x": 8,
-        "y": 25
-      },
-      "id": 2,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom"
-        },
-        "tooltip": {
-          "mode": "single"
-        }
-      },
-      "targets": [
-        {
-          "alias": "",
-          "bucketAggs": [
-            {
-              "field": "@server.keyword",
-              "id": "3",
-              "settings": {
-                "min_doc_count": "1",
-                "order": "desc",
-                "orderBy": "_term",
-                "size": "0"
-              },
-              "type": "terms"
-            },
-            {
-              "field": "@timestamp",
-              "id": "2",
-              "settings": {
-                "interval": "1m"
-              },
-              "type": "date_histogram"
-            }
-          ],
-          "metrics": [
-            {
-              "field": "web service(_total)\\current connections",
-              "id": "1",
-              "type": "avg"
-            }
-          ],
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": "current connections",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 8,
-        "x": 16,
-        "y": 25
-      },
-      "id": 4,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom"
-        },
-        "tooltip": {
-          "mode": "single"
-        }
-      },
-      "targets": [
-        {
-          "alias": "",
-          "bucketAggs": [
-            {
-              "field": "@server.keyword",
-              "id": "3",
-              "settings": {
-                "min_doc_count": "1",
-                "order": "desc",
-                "orderBy": "_term",
-                "size": "0"
-              },
-              "type": "terms"
-            },
-            {
-              "field": "@timestamp",
-              "id": "2",
-              "settings": {
-                "interval": "1m"
-              },
-              "type": "date_histogram"
-            }
-          ],
-          "metrics": [
-            {
-              "field": "asp.net v4.0.30319\\request execution time",
-              "id": "1",
-              "type": "avg"
-            }
-          ],
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": "request execution time",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 8,
-        "x": 0,
-        "y": 33
-      },
-      "id": 20,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom"
-        },
-        "tooltip": {
-          "mode": "single"
-        }
-      },
-      "targets": [
-        {
-          "alias": "",
-          "bucketAggs": [
-            {
-              "field": "@server.keyword",
-              "id": "3",
-              "settings": {
-                "min_doc_count": "1",
-                "order": "desc",
-                "orderBy": "_term",
-                "size": "0"
-              },
-              "type": "terms"
-            },
-            {
-              "field": "@timestamp",
-              "id": "2",
-              "settings": {
-                "interval": "1m",
-                "min_doc_count": "1"
-              },
-              "type": "date_histogram"
-            }
-          ],
-          "metrics": [
-            {
-              "field": "#net clr exceptions(_global_)\\# of exceps thrown",
-              "id": "1",
-              "type": "avg"
-            }
-          ],
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": ".net clr exceptions",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "NHSDIG-WEBPD-09"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": [
-              {
-                "id": "custom.hideFrom",
-                "value": {
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
                   "legend": false,
                   "tooltip": false,
                   "viz": false
@@ -1678,43 +1220,7 @@
                 ]
               }
             },
-<<<<<<< HEAD
             "overrides": []
-=======
-            {
-              "field": "@timestamp",
-              "id": "2",
-              "settings": {
-                "interval": "1m"
-              },
-              "type": "date_histogram"
-            }
-          ],
-          "metrics": [
-            {
-              "field": "asp.net v4.0.30319\\request wait time",
-              "id": "1",
-              "type": "avg"
-            }
-          ],
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": "requests wait time",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "gridPos": {
             "h": 8,
@@ -1732,27 +1238,6 @@
             "tooltip": {
               "mode": "single"
             }
-<<<<<<< HEAD
-=======
-          ],
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": "requests disconnected",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "targets": [
             {
@@ -1850,43 +1335,7 @@
                 ]
               }
             },
-<<<<<<< HEAD
             "overrides": []
-=======
-            {
-              "field": "@timestamp",
-              "id": "2",
-              "settings": {
-                "interval": "1m"
-              },
-              "type": "date_histogram"
-            }
-          ],
-          "metrics": [
-            {
-              "field": "asp.net applications(__total__)\\errors total/sec",
-              "id": "1",
-              "type": "avg"
-            }
-          ],
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": "errors total/sec",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "elasticsearch",
-        "uid": "s8c7IF2nk"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "gridPos": {
             "h": 8,
@@ -1945,7 +1394,6 @@
               "timeField": "@timestamp"
             }
           ],
-<<<<<<< HEAD
           "title": "request execution time",
           "type": "timeseries"
         },
@@ -1953,30 +1401,6 @@
           "datasource": {
             "type": "elasticsearch",
             "uid": "FIPc52hnz"
-=======
-          "query": "@server.keyword: $Servers",
-          "refId": "A",
-          "timeField": "@timestamp"
-        }
-      ],
-      "title": "errors unhandled during execution/sec",
-      "type": "timeseries"
-    },
-    {
-      "collapsed": true,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 49
-      },
-      "id": 32,
-      "panels": [
-        {
-          "datasource": {
-            "type": "elasticsearch",
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -2016,7 +1440,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2115,11 +1540,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -2159,7 +1580,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2230,33 +1652,11 @@
           ],
           "title": "requests disconnected",
           "type": "timeseries"
-<<<<<<< HEAD
         },
         {
           "datasource": {
             "type": "elasticsearch",
             "uid": "FIPc52hnz"
-=======
-        }
-      ],
-      "title": "Processor",
-      "type": "row"
-    },
-    {
-      "collapsed": true,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 50
-      },
-      "id": 30,
-      "panels": [
-        {
-          "datasource": {
-            "type": "elasticsearch",
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -2296,7 +1696,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2371,11 +1772,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -2415,7 +1812,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2490,11 +1888,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -2534,7 +1928,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2647,11 +2042,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -2691,7 +2082,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2766,11 +2158,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -2810,7 +2198,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2898,14 +2287,9 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
           },
           "description": "",
-=======
-            "uid": "s8c7IF2nk"
-          },
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2944,7 +2328,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2960,7 +2345,7 @@
             "h": 8,
             "w": 6,
             "x": 0,
-            "y": 19
+            "y": 4
           },
           "id": 85,
           "options": {
@@ -3084,11 +2469,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -3128,7 +2509,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3144,7 +2526,7 @@
             "h": 8,
             "w": 6,
             "x": 6,
-            "y": 19
+            "y": 4
           },
           "id": 87,
           "options": {
@@ -3216,11 +2598,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -3260,7 +2638,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3276,7 +2655,7 @@
             "h": 8,
             "w": 6,
             "x": 12,
-            "y": 19
+            "y": 4
           },
           "id": 89,
           "options": {
@@ -3400,11 +2779,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "fieldConfig": {
             "defaults": {
@@ -3444,7 +2819,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3485,7 +2861,7 @@
             "h": 8,
             "w": 6,
             "x": 18,
-            "y": 19
+            "y": 4
           },
           "id": 91,
           "options": {
@@ -3623,11 +2999,7 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
-=======
-            "uid": "s8c7IF2nk"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           },
           "description": "Number of read and write operations per sec",
           "fieldConfig": {
@@ -3668,7 +3040,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3683,7 +3056,7 @@
             "h": 8,
             "w": 8,
             "x": 0,
-            "y": 2
+            "y": 5
           },
           "id": 81,
           "options": {
@@ -3803,14 +3176,8 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
           },
-=======
-            "uid": "s8c7IF2nk"
-          },
-          "description": "Number of read and write operations per sec",
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3849,7 +3216,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3865,7 +3233,7 @@
             "h": 8,
             "w": 8,
             "x": 8,
-            "y": 2
+            "y": 5
           },
           "id": 79,
           "options": {
@@ -3985,15 +3353,9 @@
         {
           "datasource": {
             "type": "elasticsearch",
-<<<<<<< HEAD
             "uid": "FIPc52hnz"
           },
           "description": "Number of read and write operations per sec\n\n{{term @server.keyword}} - {{term drive_name.keyword}} :  Read",
-=======
-            "uid": "s8c7IF2nk"
-          },
-          "description": "Number of read and write operations per sec",
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -4032,7 +3394,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -4048,7 +3411,7 @@
             "h": 8,
             "w": 8,
             "x": 16,
-            "y": 2
+            "y": 5
           },
           "id": 77,
           "options": {
@@ -4170,11 +3533,7 @@
       "type": "row"
     }
   ],
-<<<<<<< HEAD
   "refresh": "1m",
-=======
-  "refresh": "30s",
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
   "schemaVersion": 33,
   "style": "dark",
   "tags": [],
@@ -4182,29 +3541,22 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "ACFUK",
-          "value": "ACFUK"
+          "selected": true,
+          "text": "NHSDIG",
+          "value": "NHSDIG"
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "s8c7IF2nk"
+          "uid": "8j5nSK27k"
         },
-<<<<<<< HEAD
-        "datasource": {
-          "type": "elasticsearch",
-          "uid": "s8c7IF2nk"
-        },
-=======
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
-        "definition": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
+        "definition": "{\"find\":\"terms\",\"field\": \"hostname.keyword\"}",
         "description": "",
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "Client",
         "options": [],
-        "query": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
+        "query": "{\"find\":\"terms\",\"field\": \"hostname.keyword\"}",
         "refresh": 1,
         "regex": "^(.*)-.*-.*",
         "skipUrlSync": false,
@@ -4213,14 +3565,9 @@
       },
       {
         "current": {
-          "selected": false,
-<<<<<<< HEAD
+          "selected": true,
           "text": "PD",
           "value": "PD"
-=======
-          "text": "PRD",
-          "value": "PRD"
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
         },
         "hide": 0,
         "includeAll": false,
@@ -4233,12 +3580,12 @@
             "value": "PROD"
           },
           {
-            "selected": true,
+            "selected": false,
             "text": "PRD",
             "value": "PRD"
           },
           {
-            "selected": false,
+            "selected": true,
             "text": "PD",
             "value": "PD"
           },
@@ -4261,25 +3608,21 @@
       {
         "current": {
           "selected": false,
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "s8c7IF2nk"
+          "uid": "8j5nSK27k"
         },
-        "definition": "{\"find\":\"terms\",\"field\": \"@server.keyword\", \"query\": \"@server.keyword:*$Client* AND @server.keyword:*$Environment*\"}",
+        "definition": "{\"find\":\"terms\",\"field\": \"hostname.keyword\", \"query\": \"hostname.keyword:*$Client* AND hostname.keyword:*$Environment*\"}",
         "description": "",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "Servers",
         "options": [],
-        "query": "{\"find\":\"terms\",\"field\": \"@server.keyword\", \"query\": \"@server.keyword:*$Client* AND @server.keyword:*$Environment*\"}",
+        "query": "{\"find\":\"terms\",\"field\": \"hostname.keyword\", \"query\": \"hostname.keyword:*$Client* AND hostname.keyword:*$Environment*\"}",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -4289,17 +3632,13 @@
     ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "ACF Web Servers",
   "uid": "ZiVCRo44z",
-<<<<<<< HEAD
-  "version": 18,
-=======
-  "version": 3,
->>>>>>> fef413e0f24f29893065d4e73d30d267d1c9d1e4
+  "version": 21,
   "weekStart": ""
 }
