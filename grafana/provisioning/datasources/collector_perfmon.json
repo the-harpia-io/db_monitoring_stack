@@ -1,10 +1,10 @@
 {
-    "name": "collector_perfmon_generic",
+    "name": "collector_perfmon",
     "type": "elasticsearch",
     "url": "http://elasticsearch:9200",
     "access": "proxy",
     "editable": true,
-    "database": "collector_perfmon_generic*",
+    "database": "collector_perfmon*",
     "jsonData": {
         "timeField": "@timestamp",
         "esVersion": "7.10.0",
