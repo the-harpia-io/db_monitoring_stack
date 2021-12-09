@@ -17,18 +17,13 @@ global:
     - collector_mssql_top_resource_consumers_total_cpu_time_ms.json
     - collector_network_connection.json
     - collector_pending_tasks.json
-    - collector_perfmon_generic.json
-    - collector_perfmon_sql_databases.json
-    - collector_perfmon_sql.json
-    - collector_perfmon_web.json
+    - collector_perfmon.json
     - collector_replication_distribution_agents_synschronization_status.json
     - collector_replication_logreader_queue.json
     - collector_service_broker.json
     - collector_wait_stats.json
     - collector.json
     - nxlogiis.json
-    - collector_perfmon_logicaldisk.json
-    - collector_perfmon_network_interface.json
     - collector_services.json
   elastic_retention_in_days: 30
 

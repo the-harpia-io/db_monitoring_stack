@@ -986,7 +986,7 @@
       "id": 34,
       "panels": [
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1094,7 +1094,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1202,7 +1202,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1310,7 +1310,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1418,7 +1418,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1526,7 +1526,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1635,7 +1635,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1744,7 +1744,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1868,7 +1868,7 @@
       "id": 32,
       "panels": [
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1977,7 +1977,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2100,7 +2100,7 @@
       "id": 30,
       "panels": [
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2240,7 +2240,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2375,7 +2375,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2524,7 +2524,7 @@
       "id": 36,
       "panels": [
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2672,7 +2672,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2816,7 +2816,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2960,7 +2960,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3104,7 +3104,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3248,7 +3248,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -3392,7 +3392,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "description": "Number of read and write operations per sec",
           "fieldConfig": {
             "defaults": {
@@ -3536,7 +3536,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "description": "Number of read and write operations per sec",
           "fieldConfig": {
             "defaults": {
@@ -3680,7 +3680,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": "collector_perfmon_web",
+          "datasource": "collector_perfmon",
           "description": "Number of read and write operations per sec",
           "fieldConfig": {
             "defaults": {
