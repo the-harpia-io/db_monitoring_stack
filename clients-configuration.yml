@@ -49,6 +49,7 @@ acfuk:
     - ACF Web Servers.json
   datasources:
     - InfluxDB.json
+    - collector_qflow_eventlog.json
   elastic_retention_in_days: 3
 
 afcon:
