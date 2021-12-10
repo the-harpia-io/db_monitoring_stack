@@ -1021,7 +1021,7 @@
             "$__all"
           ]
         },
-        "datasource": "collector_perfmon_sql",
+        "datasource": "collector_perfmon",
         "definition": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
         "description": null,
         "error": null,

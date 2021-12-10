@@ -55,7 +55,7 @@
     {
       "datasource": {
         "type": "elasticsearch",
-        "uid": "sp5nSK2nk"
+        "uid": "58Vp2c3vNyzy49nffdkGAe"
       },
       "fieldConfig": {
         "defaults": {
@@ -189,7 +189,7 @@
     {
       "datasource": {
         "type": "elasticsearch",
-        "uid": "sp5nSK2nk"
+        "uid": "58Vp2c3vNyzy49nffdkGAe"
       },
       "fieldConfig": {
         "defaults": {
@@ -302,7 +302,7 @@
     {
       "datasource": {
         "type": "elasticsearch",
-        "uid": "sp5nSK2nk"
+        "uid": "58Vp2c3vNyzy49nffdkGAe"
       },
       "fieldConfig": {
         "defaults": {
@@ -390,7 +390,7 @@
           "dashLength": 10,
           "dashes": false,
           "datasource": {
-            "uid": "collector_qflow_eventlog"
+            "uid": "bFNczVxQQoP6j3srVhYiug"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -508,7 +508,7 @@
         },
         {
           "datasource": {
-            "uid": "collector_qflow_eventlog"
+            "uid": "bFNczVxQQoP6j3srVhYiug"
           },
           "fieldConfig": {
             "defaults": {
@@ -609,7 +609,7 @@
         },
         {
           "datasource": {
-            "uid": "collector_qflow_eventlog"
+            "uid": "bFNczVxQQoP6j3srVhYiug"
           },
           "fieldConfig": {
             "defaults": {
@@ -705,7 +705,7 @@
           "dashes": false,
           "datasource": {
             "type": "elasticsearch",
-            "uid": "IucnSK2nz"
+            "uid": "e6b5yonf7ZtBEQjPUxRUm6"
           },
           "fieldConfig": {
             "defaults": {
@@ -902,7 +902,7 @@
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "FIPc52hnz"
+          "uid": "9vWEoPsAXKAkgNZoSHBfkQ"
         },
         "definition": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
         "hide": 0,
@@ -929,7 +929,7 @@
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "Jwc7SFh7k"
+          "uid": "gCXMpAmzDq9axapFTfXTG7"
         },
         "definition": "{\"find\":\"terms\",\"field\": \"publication.keyword\"}",
         "hide": 2,
@@ -952,7 +952,7 @@
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "IucnSK2nz"
+          "uid": "e6b5yonf7ZtBEQjPUxRUm6"
         },
         "definition": "{\"find\":\"terms\",\"field\": \"queue_name.keyword\"}",
         "hide": 0,

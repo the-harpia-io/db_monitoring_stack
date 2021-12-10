@@ -55,7 +55,7 @@
     {
       "datasource": {
         "type": "elasticsearch",
-        "uid": "C5c7IFh7k"
+        "uid": "dffboLJ6nqt8f9EZhVQF6n"
       },
       "fieldConfig": {
         "defaults": {
@@ -204,7 +204,7 @@
     {
       "datasource": {
         "type": "elasticsearch",
-        "uid": "C5c7IFh7k"
+        "uid": "dffboLJ6nqt8f9EZhVQF6n"
       },
       "fieldConfig": {
         "defaults": {
@@ -386,7 +386,7 @@
     {
       "datasource": {
         "type": "elasticsearch",
-        "uid": "C5c7IFh7k"
+        "uid": "dffboLJ6nqt8f9EZhVQF6n"
       },
       "fieldConfig": {
         "defaults": {
@@ -530,7 +530,7 @@
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "FIPc52hnz"
+          "uid": "9vWEoPsAXKAkgNZoSHBfkQ"
         },
         "definition": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
         "hide": 0,
@@ -557,7 +557,7 @@
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "Jwc7SFh7k"
+          "uid": "gCXMpAmzDq9axapFTfXTG7"
         },
         "definition": "{\"find\":\"terms\",\"field\": \"publication.keyword\"}",
         "hide": 2,
@@ -580,7 +580,7 @@
         },
         "datasource": {
           "type": "elasticsearch",
-          "uid": "IucnSK2nz"
+          "uid": "e6b5yonf7ZtBEQjPUxRUm6"
         },
         "definition": "{\"find\":\"terms\",\"field\": \"queue_name.keyword\"}",
         "hide": 0,
@@ -594,14 +594,6 @@
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
-      },
-      {
-        "datasource": "collector_event_log",
-        "filters": [],
-        "hide": 0,
-        "name": "Filters",
-        "skipUrlSync": false,
-        "type": "adhoc"
       }
     ]
   },
