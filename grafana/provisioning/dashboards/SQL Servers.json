@@ -7688,7 +7688,7 @@
         "options": [],
         "query": "{\"find\":\"terms\",\"field\": \"@server.keyword\"}",
         "refresh": 1,
-        "regex": "/.SQL.*/",
+        "regex": "/.*SQL.*/",
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
