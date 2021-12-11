@@ -1,5 +1,6 @@
 global:
   dashboards:
+    - Servers.json
     - SQL Servers - Alerts.json
     - SQL Servers.json
     - Web Servers.json
