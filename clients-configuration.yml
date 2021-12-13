@@ -65,3 +65,10 @@ powercom:
   datasources:
     - InfluxDB.json
   elastic_retention_in_days: 30
+
+  herzeliya:
+  dashboards:    
+    - Replication.json
+  datasources:
+    - InfluxDB.json
+  elastic_retention_in_days: 30
