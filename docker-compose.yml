@@ -182,7 +182,7 @@ services:
       test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
 
   monitoring-controller:
-    image: theharpia/monitoring_controller:v1.0.8
+    image: theharpia/monitoring_controller:v1.0.9
     container_name: monitoring-controller
     volumes:
       - .:/tmp
