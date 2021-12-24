@@ -126,7 +126,7 @@ services:
       - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
     environment:
       - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
-      - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-Ahuzot=100$$}
+      - GF_SECURITY_ADMIN_PASSWORD="Ahuzot=100$"
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_DATABASE_TYPE=mysql
       - GF_DATABASE_HOST=mariadb
@@ -190,7 +190,7 @@ services:
       - CLIENT_CONFIG_PATH=/tmp
       - GRAFANA_API=grafana:3000
       - GRAFANA_USER=admin
-      - GRAFANA_PASSWORD=Ahuzot=100$$
+      - GRAFANA_PASSWORD="Ahuzot=100$"
       - KIBANA_API=kibana:5601
       - ELASTIC_API=elasticsearch:9200
       - CLIENT_NAME=$CLIENT_NAME
@@ -198,7 +198,7 @@ services:
       - LICENSE_KEY=$LICENSE_KEY
       # - CLIENT_NAME=Motorola-Zramim
       # - SLACK_WEBHOOK=http://slack.example.com
-      # - LICENSE_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1vdG9yb2xhLVpyYW1pbSIsImV4cCI6MTYzOTQ5ODczNn0.r_UNxPWNY9kShs_YeBE8kEvnKayhP4wAVUkA-iEDaAg
+      # - LICENSE_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1vdG9yb2xhLVpyYW1pbSIsImV4cCI6MTY0Mjk1NzI3OH0.ALJoFocNtwq-wsAdw3x-1LuEWRlSpT-6IDzXgvRNkI4
     networks:
       - monitoring
     depends_on:
