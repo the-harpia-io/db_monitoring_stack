@@ -73,10 +73,9 @@ herzeliya:
     - InfluxDB.json
   elastic_retention_in_days: 30
 
-  idemitsu:
+idemitsu:
   dashboards:    
   datasources:
     - InfluxDB.json
   elastic_retention_in_days: 30
 
-  
