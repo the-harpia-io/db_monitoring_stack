@@ -182,7 +182,7 @@ services:
       test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:8200/
 
   monitoring-controller:
-    image: theharpia/monitoring_controller:v1.0.9
+    image: theharpia/monitoring_controller:v1.0.11
     container_name: monitoring-controller
     volumes:
       - .:/tmp
@@ -196,9 +196,9 @@ services:
       - CLIENT_NAME=$CLIENT_NAME
       - SLACK_WEBHOOK=$SLACK_WEBHOOK
       - LICENSE_KEY=$LICENSE_KEY
-      # - CLIENT_NAME=Motorola-Zramim
+      # - CLIENT_NAME=idemitsu
       # - SLACK_WEBHOOK=http://slack.example.com
-      # - LICENSE_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1vdG9yb2xhLVpyYW1pbSIsImV4cCI6MTY0Mjk1NzI3OH0.ALJoFocNtwq-wsAdw3x-1LuEWRlSpT-6IDzXgvRNkI4
+      # - LICENSE_KEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6ImlkZW1pdHN1IiwiZXhwIjoxNzI2OTEyODQxfQ.QzF4TC76zkmEv34UaieAJBwjEQlVE6WVK1LrjuJ9c7E
     networks:
       - monitoring
     depends_on:
