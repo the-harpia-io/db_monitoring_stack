@@ -1,0 +1,13 @@
+{
+    "name": "collector_fastpark_blacklist",
+    "type": "elasticsearch",
+    "url": "http://elasticsearch:9200",
+    "access": "proxy",
+    "editable": true,
+    "database": "collector_fastpark_blacklist*",
+    "jsonData": {
+        "timeField": "@timestamp",
+        "esVersion": "7.10.0",
+        "maxConcurrentShardRequests": 5
+    }
+}

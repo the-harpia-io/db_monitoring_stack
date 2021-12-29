@@ -26,6 +26,9 @@ global:
     - collector.json
     - nxlogiis.json
     - collector_services.json
+    - collector_fastpark_blacklist.json
+    - collector_fastpark_occupancy.json
+    - collector_fastpark_entries_exits.json
   elastic_retention_in_days: 30
 
 
@@ -55,8 +58,13 @@ acfuk:
 
 afcon:
   dashboards:    
+    - Replication.json
+    - Afcon.json
   datasources:
     - InfluxDB.json
+    - collector_fastpark_blacklist.json
+    - collector_fastpark_occupancy.json
+    - collector_fastpark_entries_exits.json
   elastic_retention_in_days: 30
 
 powercom:
@@ -69,6 +77,7 @@ powercom:
 herzeliya:
   dashboards:    
     - Replication.json
+    - Afcon.json
   datasources:
     - InfluxDB.json
   elastic_retention_in_days: 30
