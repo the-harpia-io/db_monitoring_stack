@@ -94,3 +94,10 @@ reshut:
   datasources:
     - InfluxDB.json
   elastic_retention_in_days: 30
+
+celltick:
+  dashboards:   
+    - Replication.json 
+  datasources:
+    - InfluxDB.json
+  elastic_retention_in_days: 15
